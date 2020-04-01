@@ -1,5 +1,31 @@
+/* This is for header inside nav bar */
+h1,h6{
+    font-family: 'Gotu', sans-serif;
+}
+/* This is for the date on the header */
 #todaysdate{
     text-align: center;
     font-size: x-large;
     color: blue;
+}
+/* This is for the hour box */
+.timebox{
+    text-align: right;
+    color: black;
+}
+/* This is for the text box inside the body  */
+.inputbox{
+    width: 100%; 
+    font-family: 'Gotu', sans-serif;
+    background: skyblue;
+}
+/* updating the backgroung color based on hour */
+.past{
+    background-color: grey;
+}
+.present{
+    background-color: red;
+}
+.future{
+    background-color: greenyellow;
 }

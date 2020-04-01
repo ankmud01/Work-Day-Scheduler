@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WorkDayScheduler</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gotu&family=Roboto:wght@100;400&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
     <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -27,11 +28,50 @@
         </div>
     </nav>
     <main>
-        <div id="scheulerBody" class="container">
-            <div class="row align-items-center">
-                <div class="col col-lg-2 py-3 px-lg-5 border border-warning bg-light">9AM</div>
-                <div class="col py-3 px-lg-5 border border-warning bg-light">Text Input Area</div>
-                <div class="col col-lg-2 py-3 px-lg-5 border border-warning bg-light">Savebutton</div>
+            <div class="row align-items-center" id="t-9">
+                <div class="col col-md-1 py-1 px-lg-3 rounded-md timebox">9AM</div>
+                <textarea class="col col py-1 px-lg-3 border-warning inputbox rounded-lg" id="9"></textarea>                
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-10">
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg border-warning timebox" disabled>10AM</button>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="10"></textarea>                
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg border-warning">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-11">
+                <div class="col col-lg-1 py-1 px-lg-3 rounded-lg timebox">11AM</div>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="11"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-12">
+                <div class="col col-lg-1 py-1 px-lg-3 rounded-lg timebox">12PM</div>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="12"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-13">
+                <div class="col col-lg-1 py-1 px-lg-3 rounded-lg timebox">1PM</div>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="13"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-14">
+                <div class="col col-lg-1 py-1 px-lg-3 rounded-lg timebox">2PM</div>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="14"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-15">
+                <div class="col col-lg-1 py-1 px-lg-3 timebox rounded-lg">3PM</div>
+                <textarea class="col py-1 px-lg-3 border-warning inputbox rounded-lg" id="15"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-16">
+                <div class="col col-lg-1 py-1 px-lg-3 rounded-lg timebox">4PM</div>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="16"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
+            </div>
+            <div class="row align-items-center" id="t-17">
+                <div class="col col-lg-1 py-1 px-lg-3 rounded-lg timebox">5PM</div>
+                <textarea class="col py-1 px-lg-3 border-warning rounded-lg inputbox" id="17"></textarea>
+                <button class="col col-lg-1 py-1 px-lg-3 rounded-lg">Save</button>
             </div>
         </div>
     </main>
