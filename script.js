@@ -34,3 +34,20 @@ $(".inputbox").each(function(){
         $(this).addClass("future");
     }
 });
+
+//setting event listner in the save button to save the value from text area in local storage
+$(".savebutton").on("click",function(e){    //this creates the event click
+    e.preventDefault()
+//Local storage takes 2 parameter id and value. So we need to create 2 variable. One to store text 
+//from inputbox and another to set the id value. This will set the right text value in rt id 
+    var inputValue = $(this).prev().val();  
+    var inputboxid = $(this).prev().attr("id");
+    console.log("My inputValue for - " + inputboxid + " and the value is: " + inputValue);
+    localStorage.setItem(inputboxid, inputValue);
+});
+
+var boxid = Array.from($(".inputbox").attr("id"));
+console.log("the box id is " + boxid[0]);
+var textboxValue =  window.localStorage.getItem(boxid[0]);
+console.log("The value of this box is - " + textboxValue);
+$("#boxid[0]").append(textboxValue);
