@@ -8,6 +8,9 @@ var inputbox2 = $("#2")
 var inputbox3 = $("#3")
 var inputbox4 = $("#4")
 var inputbox5 = $("#5")
+var inputArray = [];
+const retriveData = JSON.parse(localStorage.getItem('items'));
+console.log("My Old data - " + retriveData)
 
 //This is to figure out the current date and add it to the header using append
 const currentDate = moment();
@@ -41,13 +44,14 @@ $(".savebutton").on("click",function(e){    //this creates the event click
 //Local storage takes 2 parameter id and value. So we need to create 2 variable. One to store text 
 //from inputbox and another to set the id value. This will set the right text value in rt id 
     var inputValue = $(this).prev().val();  
-    var inputboxid = $(this).prev().attr("id");
-    console.log("My inputValue for - " + inputboxid + " and the value is: " + inputValue);
-    localStorage.setItem(inputboxid, inputValue);
+    // var inputboxid = $(this).prev().attr("id");
+    console.log("My inputValue for is: " + inputValue);
+    inputArray.push(inputValue);
+    localStorage.setItem('items', JSON.stringify(inputArray))
 });
 
-var boxid = Array.from($(".inputbox").attr("id"));
-console.log("the box id is " + boxid[0]);
-var textboxValue =  window.localStorage.getItem(boxid[0]);
-console.log("The value of this box is - " + textboxValue);
-$("#boxid[0]").append(textboxValue);
+// var boxid = Array.from($(".inputbox").attr("id"));
+// console.log("the box id is " + boxid[0]);
+// var textboxValue =  window.localStorage.getItem(boxid[0]);
+// console.log("The value of this box is - " + textboxValue);
+// $("#boxid[0]").append(textboxValue);
