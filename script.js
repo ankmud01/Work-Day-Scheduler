@@ -1,26 +1,14 @@
-//Declaring all the global variables so that they can be used through out the page
-var inputbox9 = $("#9")
-var inputbox10 = $("#10")
-var inputbox11 = $("#11")
-var inputbox12 = $("#12")
-var inputbox1 = $("#1")
-var inputbox2 = $("#2")
-var inputbox3 = $("#3")
-var inputbox4 = $("#4")
-var inputbox5 = $("#5")
-
-var inputboxi = $(".inputbox");
+//storing everything from local storage into an array variable
 var inputArray = JSON.parse(localStorage.getItem('input')) || [];
 
-console.log(inputArray.length);
-// console.log(inputboxi[].id);
-
+//getting value back from local storage and putting value correctly in UI
 for (var i=0; i<inputArray.length; i++){
-    if(inputArray[i].id == inputboxi[i].id){
-       inputboxi[i].append(inputArray[i].value)
-    //    console.log(inputArray[i].value)
+    var currentItem = inputArray[i];
+    var itemid = currentItem.id;
+    var itemvalue = currentItem.value;
 
-    }
+    var inputboxEl = document.getElementById(''+ itemid + '');
+    inputboxEl.value = itemvalue;
 }
 
 //This is to figure out the current date and add it to the header using append
@@ -53,8 +41,7 @@ $(".inputbox").each(function(){
 $(".savebutton").on("click",function(e){    //this creates the event click
     e.preventDefault()
 //Local storage takes 2 parameter id and value. So we need to create 2 variable. One to store text 
-//from inputbox and another to set the id value. This will set the right text value in rt id 
-    
+//from inputbox and another to set the id value. This will set the right text value in rt id   
     var inputValue = {
     value: $(this).prev().val(),  
     id: $(this).prev().attr("id")
